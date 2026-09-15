@@ -47,6 +47,17 @@ namespace pryCadoppiSP2EjercicioResolver
                 }
                 else
                 {
+                    //Sirve para crear archivos
+                    //Deja manipularlo
+
+                    StreamWriter archivo;
+                    archivo = new StreamWriter("RegistroBoletos.txt");
+
+                    archivo.WriteLine("Código: " + txtCodigo.Text + 
+                        " Tipo Boleto: " + cboTipoBoleto.Text);
+
+                    archivo.Close();
+
                     MessageBox.Show("Registramos su boleto.", "Registro de Boleto", 
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -56,7 +67,7 @@ namespace pryCadoppiSP2EjercicioResolver
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar <= 47 || e.KeyChar >= 58) 
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8 ) 
             {
                 e.Handled = true;
             }
