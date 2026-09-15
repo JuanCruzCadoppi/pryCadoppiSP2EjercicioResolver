@@ -28,133 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCodigo = new TextBox();
-            this.cboTipoBoleto = new ComboBox();
-            this.gbDistancia = new GroupBox();
-            rbCorta = new RadioButton();
-            rbLarga = new RadioButton();
             btnRegistrar = new Button();
-            this.dtpFecha = new DateTimePicker();
-            this.lblFecha = new Label();
-            this.lblCodigo = new Label();
             lblTipo = new Label();
-            this.gbDistancia.SuspendLayout();
+            grbDistancia = new GroupBox();
+            optLarga = new RadioButton();
+            opCorta = new RadioButton();
+            txtCodigo = new TextBox();
+            cboTipoBoleto = new ComboBox();
+            dtFecha = new DateTimePicker();
+            lblFecha = new Label();
+            lblCodigo = new Label();
+            grbDistancia.SuspendLayout();
             SuspendLayout();
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new Point(77, 70);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new Size(73, 23);
-            this.txtCodigo.TabIndex = 0;
-            // 
-            // cboTipoBoleto
-            // 
-            this.cboTipoBoleto.FormattingEnabled = true;
-            this.cboTipoBoleto.Location = new Point(77, 112);
-            this.cboTipoBoleto.Name = "cboTipoBoleto";
-            this.cboTipoBoleto.Size = new Size(114, 23);
-            this.cboTipoBoleto.TabIndex = 1;
-            // 
-            // gbDistancia
-            // 
-            this.gbDistancia.Controls.Add(rbLarga);
-            this.gbDistancia.Controls.Add(rbCorta);
-            this.gbDistancia.Location = new Point(22, 160);
-            this.gbDistancia.Name = "gbDistancia";
-            this.gbDistancia.Size = new Size(169, 95);
-            this.gbDistancia.TabIndex = 2;
-            this.gbDistancia.TabStop = false;
-            this.gbDistancia.Text = "Distancia";
-            this.gbDistancia.Enter += this.groupBox1_Enter;
-            // 
-            // rbCorta
-            // 
-            rbCorta.AutoSize = true;
-            rbCorta.Location = new Point(34, 22);
-            rbCorta.Name = "rbCorta";
-            rbCorta.Size = new Size(54, 19);
-            rbCorta.TabIndex = 3;
-            rbCorta.TabStop = true;
-            rbCorta.Text = "Corta";
-            rbCorta.UseVisualStyleBackColor = true;
-            rbCorta.CheckedChanged += this.radioButton1_CheckedChanged;
-            // 
-            // rbLarga
-            // 
-            rbLarga.AutoSize = true;
-            rbLarga.Location = new Point(34, 62);
-            rbLarga.Name = "rbLarga";
-            rbLarga.Size = new Size(54, 19);
-            rbLarga.TabIndex = 4;
-            rbLarga.TabStop = true;
-            rbLarga.Text = "Larga";
-            rbLarga.UseVisualStyleBackColor = true;
-            rbLarga.CheckedChanged += this.radioButton2_CheckedChanged;
             // 
             // btnRegistrar
             // 
-            btnRegistrar.Location = new Point(116, 261);
+            btnRegistrar.Location = new Point(124, 262);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(75, 23);
             btnRegistrar.TabIndex = 3;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Location = new Point(77, 28);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new Size(114, 23);
-            this.dtpFecha.TabIndex = 4;
-            this.dtpFecha.ValueChanged += this.dateTimePicker1_ValueChanged;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new Point(22, 34);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new Size(38, 15);
-            this.lblFecha.TabIndex = 5;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new Point(22, 77);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new Size(46, 15);
-            this.lblCodigo.TabIndex = 6;
-            this.lblCodigo.Text = "Código";
-            this.lblCodigo.Click += this.label2_Click;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // lblTipo
             // 
             lblTipo.AutoSize = true;
-            lblTipo.Location = new Point(22, 120);
+            lblTipo.Location = new Point(22, 122);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(31, 15);
             lblTipo.TabIndex = 7;
             lblTipo.Text = "Tipo";
             // 
+            // grbDistancia
+            // 
+            grbDistancia.Controls.Add(optLarga);
+            grbDistancia.Controls.Add(opCorta);
+            grbDistancia.Location = new Point(22, 156);
+            grbDistancia.Name = "grbDistancia";
+            grbDistancia.Size = new Size(177, 100);
+            grbDistancia.TabIndex = 8;
+            grbDistancia.TabStop = false;
+            grbDistancia.Text = "Distancia";
+            // 
+            // optLarga
+            // 
+            optLarga.AutoSize = true;
+            optLarga.Location = new Point(18, 60);
+            optLarga.Name = "optLarga";
+            optLarga.Size = new Size(54, 19);
+            optLarga.TabIndex = 1;
+            optLarga.TabStop = true;
+            optLarga.Text = "Larga";
+            optLarga.UseVisualStyleBackColor = true;
+            // 
+            // opCorta
+            // 
+            opCorta.AutoSize = true;
+            opCorta.Location = new Point(18, 22);
+            opCorta.Name = "opCorta";
+            opCorta.Size = new Size(54, 19);
+            opCorta.TabIndex = 0;
+            opCorta.TabStop = true;
+            opCorta.Text = "Corta";
+            opCorta.UseVisualStyleBackColor = true;
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Location = new Point(71, 74);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 23);
+            txtCodigo.TabIndex = 9;
+            txtCodigo.KeyPress += txtCodigo_KeyPress;
+            // 
+            // cboTipoBoleto
+            // 
+            cboTipoBoleto.FormattingEnabled = true;
+            cboTipoBoleto.Location = new Point(70, 118);
+            cboTipoBoleto.Name = "cboTipoBoleto";
+            cboTipoBoleto.Size = new Size(129, 23);
+            cboTipoBoleto.TabIndex = 10;
+            // 
+            // dtFecha
+            // 
+            dtFecha.Format = DateTimePickerFormat.Short;
+            dtFecha.Location = new Point(71, 30);
+            dtFecha.Name = "dtFecha";
+            dtFecha.Size = new Size(128, 23);
+            dtFecha.TabIndex = 11;
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(22, 38);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(38, 15);
+            lblFecha.TabIndex = 12;
+            lblFecha.Text = "Fecha";
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.AutoSize = true;
+            lblCodigo.Location = new Point(22, 80);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(46, 15);
+            lblCodigo.TabIndex = 13;
+            lblCodigo.Text = "Codigo";
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(219, 303);
+            ClientSize = new Size(222, 300);
+            Controls.Add(lblCodigo);
+            Controls.Add(lblFecha);
+            Controls.Add(dtFecha);
+            Controls.Add(cboTipoBoleto);
+            Controls.Add(txtCodigo);
+            Controls.Add(grbDistancia);
             Controls.Add(lblTipo);
-            Controls.Add(this.lblCodigo);
-            Controls.Add(this.lblFecha);
-            Controls.Add(this.dtpFecha);
             Controls.Add(btnRegistrar);
-            Controls.Add(this.gbDistancia);
-            Controls.Add(this.cboTipoBoleto);
-            Controls.Add(this.txtCodigo);
+            MaximizeBox = false;
             Name = "frmPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Venta Boletería";
             Load += frmPrincipal_Load;
-            this.gbDistancia.ResumeLayout(false);
-            this.gbDistancia.PerformLayout();
+            grbDistancia.ResumeLayout(false);
+            grbDistancia.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,5 +171,13 @@
         private Label label1;
         private Label label2;
         private Label lblTipo;
+        private GroupBox grbDistancia;
+        private RadioButton optLarga;
+        private RadioButton opCorta;
+        private TextBox txtCodigo;
+        private ComboBox cboTipoBoleto;
+        private DateTimePicker dtFecha;
+        private Label lblFecha;
+        private Label lblCodigo;
     }
 }
